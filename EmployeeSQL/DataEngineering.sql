@@ -53,9 +53,9 @@ select * from salary;
 select * from title;
 
 --Add Foreign key
-ALTER TABLE employee ADD CONSTRAINT fk_employee_emp_title_id_3 FOREIGN KEY(emp_title_id)
+ALTER TABLE dept_managers ADD CONSTRAINT fk_dept_managers_emp_no_3 FOREIGN KEY(emp_no)
+REFERENCES employee (emp_no);
+ALTER TABLE salary ADD CONSTRAINT fk_salary_emp_no_2 FOREIGN KEY(emp_no)
+REFERENCES employee (emp_no);
+ALTER TABLE employee ADD CONSTRAINT fk_employee_emp_title_id_5 FOREIGN KEY(emp_title_id)
 REFERENCES title (title_id);
-ALTER TABLE dept_managers ADD CONSTRAINT fk_dept_managers_emp_no FOREIGN KEY(emp_no)
-REFERENCES employee (emp_no);
-ALTER TABLE salary ADD CONSTRAINT fk_salary_emp_no FOREIGN KEY(emp_no)
-REFERENCES employee (emp_no);
